@@ -10,6 +10,9 @@ var http = require('http');
 var port = 8000;
 var stylesheet = './examples/stylesheet.xml';
 
+// register shapefile plugin
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+
 http.createServer(function(req, res) {
   res.writeHead(500, {'Content-Type': 'text/plain'});
   var map = new mapnik.Map(256, 256);

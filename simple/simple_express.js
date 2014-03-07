@@ -8,6 +8,9 @@ var mapnik = require('mapnik');
 var express = require('express');
 var path = require('path');
 
+// register shapefile plugin
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+
 var app = express();
 var port = 8000;
 

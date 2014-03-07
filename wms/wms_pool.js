@@ -9,6 +9,9 @@ var pool_size = 10;
 
 var usage = 'usage: wms.js <stylesheet> <port>';
 
+// register datasource plugins
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+
 var stylesheet = process.argv[2];
 
 if (!stylesheet) {

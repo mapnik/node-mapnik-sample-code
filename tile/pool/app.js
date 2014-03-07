@@ -11,6 +11,9 @@ var mapnik = require('mapnik')
   , http = require('http')
   , parseXYZ = require('../../utils/tile.js').parseXYZ;
 
+// register shapefile plugin
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+
 var TMS_SCHEME = false;
 
 // create a pool of 5 maps to manage concurrency under load

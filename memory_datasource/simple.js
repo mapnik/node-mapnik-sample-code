@@ -4,6 +4,9 @@ var mapnik = require('mapnik');
 var path = require('path');
 var merc = require('../utils/sphericalmercator').proj4;
 
+// register shapefile plugin
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+
 // map with just a style
 // eventually the api will support adding styles in javascript
 var s = '<Map srs="' + merc + '">';
@@ -74,7 +77,7 @@ map.add_layer(l);
 // zoom to the extent of the new layer (pulled from options since otherwise we cannot know)
 map.zoomAll();
 
-// render it! You should see a bunch of red and blue points reprenting
+// render it! You should see a bunch of red and blue points
 map.renderFileSync('memory_points.png');
 
 var options = {

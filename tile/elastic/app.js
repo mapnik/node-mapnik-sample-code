@@ -6,6 +6,9 @@ var mapnik = require('mapnik')
   , tile = 256
   , path = require('path');
 
+// register shapefile plugin
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+
 var usage = 'usage: app.js <port>';
 
 var port = process.argv[2];

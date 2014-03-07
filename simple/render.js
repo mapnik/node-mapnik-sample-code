@@ -7,7 +7,6 @@
 var mapnik = require('mapnik');
 var sys = require('fs');
 var child_process = require('child_process');
-
 var usage = 'usage: render.js <stylesheet> <image>';
 
 var stylesheet = process.argv[2];
@@ -21,6 +20,9 @@ if (!image) {
    console.log(usage);
    process.exit(1);
 }
+
+// register shapefile plugin
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
 
 var map = new mapnik.Map(600, 400);
 

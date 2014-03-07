@@ -15,6 +15,9 @@ var path = require('path');
 var port = 8000;
 var TMS_SCHEME = false;
 
+// register postgis plugin
+if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+
 // change this to fit your db connection and settings
 var postgis_settings = {
   'dbname' : 'test2',

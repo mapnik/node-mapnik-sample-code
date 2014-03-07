@@ -1,14 +1,21 @@
 # node-mapnik examples
 
-Examples are designed to be run from the root like:
-
-    node ./examples/simple/render.js examples/stylesheet.xml map.png
-
 ## Depends
+
+ - Node.js v0.10.x or v0.8.x
+ - Mapnik node.js bindings
+
+    npm install mapnik
 
 A few examples have other dependencies. Install all possible like:
 
     npm install express generic-pool get
+
+
+Examples are designed to be run from the root like:
+
+    node ./simple/render.js ./stylesheet.xml map.png
+
 
 Examples are arranged into topic directories:
 
