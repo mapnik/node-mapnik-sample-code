@@ -6,20 +6,19 @@
 
 var mapnik = require('mapnik');
 var http = require('http');
+var path = require('path');
 
 var port = 8000;
-var stylesheet = './examples/stylesheet.xml';
-
+var stylesheet = path.join(__dirname, '../stylesheet.xml');
 // register shapefile plugin
 if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
 
 http.createServer(function(req, res) {
   res.writeHead(500, {'Content-Type': 'text/plain'});
   var map = new mapnik.Map(256, 256);
-  map.load(stylesheet,
-    function(err,map) {
+  map.load(stylesheet, function(err,map) {
       if (err) {
-          res.end(err.message);
+          return res.end(err.message);
       }
       map.zoomAll();
       var im = new mapnik.Image(256, 256);
