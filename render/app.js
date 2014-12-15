@@ -31,4 +31,7 @@ map.zoomAll();
 map.renderFileSync(image);
 
 console.log('rendered map to ' + image);
-child_process.exec('open ' + image);
+
+if (process.argv.indexOf('--no-open') == -1) {
+    child_process.exec('open ' + image);
+}

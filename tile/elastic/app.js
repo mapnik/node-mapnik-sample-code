@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 var mapnik = require('mapnik')
   , mercator = require('../../utils/sphericalmercator')

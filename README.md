@@ -2,13 +2,13 @@
 
 ## Depends
 
- - Node.js v0.10.x or v0.8.x
+ - Node.js v0.10.x
  - Mapnik node.js bindings (`node-mapnik`)
 
 
 Install `node-mapnik` like:
 
-    npm install mapnik
+    npm install mapnik@latest
 
 A few examples have other dependencies. Install all possible like:
 
