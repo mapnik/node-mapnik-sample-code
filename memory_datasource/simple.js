@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+// This example shows how to use a custom data source with MemoryDatasource 
+// to render points based on particular XML rules
+//
+// expected output: /outputs/memory_points.png & /outputs/memory_points.json
+
 var fs = require('fs');
 var mapnik = require('mapnik');
 var path = require('path');
@@ -64,7 +69,7 @@ var options = {
     extent: '-20037508.342789,-8283343.693883,20037508.342789,18365151.363070'
 };
 
-// contruct a mapnik layer dynamically
+// construct a mapnik layer dynamically
 var l = new mapnik.Layer('test');
 l.srs = map.srs;
 l.styles = ['points'];
@@ -89,7 +94,8 @@ var options = {
 var grid = new mapnik.Grid(map.width, map.height, {key: 'feat_id'});
 map.render(grid, options, function(err, grid) {
     if (err) throw err;
-    fs.writeFileSync('memory_points.json', JSON.stringify(grid.encodeSync('utf', {resolution: 4})));
+    console.log(grid);
+    fs.writeFileSync('memory_points.json', JSON.stringify(grid.encodeSync({resolution: 4, features: true})));
 });
 
 console.log('rendered to memory_points.png and memory_points.json');

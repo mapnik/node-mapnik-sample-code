@@ -2,7 +2,9 @@
 // This example shows how to use node-mapnik to render
 // a map to a image on disk
 //
-// expected output: http://goo.gl/cyGwo
+// run command: node ./render/app.js ./stylesheet.xml map.png
+//
+// expected output: /outputs/map.png
 
 var mapnik = require('mapnik');
 var sys = require('fs');

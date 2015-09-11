@@ -1,5 +1,13 @@
 #!/usr/bin/env node
 
+// This example shows how to use node-mapnik to create a WMS
+// server that accepts bbox parameters to render a map image
+//
+// run command: node ./wms/wms_pool.js ./stylesheet.xml 8000
+//
+// example query: http://127.0.0.1:8000/?bbox=-20037508.34,-5009377.085697313,-5009377.08569731,15028131.25709193
+// expected output: /outputs/wms.png
+
 var http = require('http');
 var mapnik = require('mapnik');
 var mappool = require('../utils/pool.js');
