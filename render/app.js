@@ -4,7 +4,7 @@
 //
 // run command: node ./render/app.js ./stylesheet.xml map.png
 //
-// expected output: /outputs/map.png
+// expected output: https://github.com/mapnik/node-mapnik-sample-code/blob/master/outputs/map.png
 
 var mapnik = require('mapnik');
 var sys = require('fs');

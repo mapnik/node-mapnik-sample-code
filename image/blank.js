@@ -8,7 +8,7 @@ var path = require('path');
 // Serve a blank tile. This can indicate the absolute fastest mapnik can return a tile
 // and highlights zlib/inflate bottleneck (compare "png" format to "png8")
 //
-// expected output: /outputs/image-blank.png
+// expected output: https://github.com/mapnik/node-mapnik-sample-code/blob/master/outputs/image-blank.png
 var port = 8000;
 
 var im = new mapnik.Image(256, 256);

@@ -3,7 +3,8 @@
 // This example shows how to use a custom data source with MemoryDatasource 
 // to render points based on particular XML rules
 //
-// expected output: /outputs/memory_points.png & /outputs/memory_points.json
+// expected png output: https://github.com/mapnik/node-mapnik-sample-code/blob/master/outputs/memory_points.png 
+// expected json output: https://github.com/mapnik/node-mapnik-sample-code/blob/master/outputs/memory_points.json
 
 var fs = require('fs');
 var mapnik = require('mapnik');

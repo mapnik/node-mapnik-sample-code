@@ -6,7 +6,7 @@
 // run command: node ./wms/wms_pool.js ./stylesheet.xml 8000
 //
 // example query: http://127.0.0.1:8000/?bbox=-20037508.34,-5009377.085697313,-5009377.08569731,15028131.25709193
-// expected output: /outputs/wms.png
+// expected output: https://github.com/mapnik/node-mapnik-sample-code/blob/master/outputs/wms.png
 
 var http = require('http');
 var mapnik = require('mapnik');
