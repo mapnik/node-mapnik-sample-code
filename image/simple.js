@@ -3,7 +3,7 @@
 // This example shows how to use node-mapnik with the
 // basic node http server
 //
-// expected output: http://goo.gl/cyGwo
+// expected output: https://github.com/mapnik/node-mapnik-sample-code/blob/master/outputs/image-simple.png
 
 var mapnik = require('mapnik');
 var http = require('http');
